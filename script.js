@@ -11,7 +11,8 @@ close.onclick = () =>{
     spans[3].innerText= 'Region:'
     displayer.style.position = 'absolute'
     displayer.style.display = 'none'
-    displayer.removeChild('#flag')
+    let go = document.querySelector('img')
+    displayer.removeChild(go)
 }
 let getInfos = (API) =>{
     API.forEach((country)=>{
@@ -27,7 +28,6 @@ let getInfos = (API) =>{
     })
 }
 let display = (a) =>{
-
     spans[0].innerText+= infos[a][0]
     spans[1].innerText+= infos[a][1]
     spans[2].innerText+= infos[a][2]
@@ -37,7 +37,7 @@ let display = (a) =>{
     flag.src = infos[a][4]
     flag.style.position = 'absolute'
     flag.style.right = '5%'
-    flag.style.top = '2%'
+    flag.style.top = '70%'
     flag.style.width = '26%'
     flag.style.height = '17%'
     displayer.appendChild(flag)
